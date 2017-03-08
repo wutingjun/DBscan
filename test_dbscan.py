@@ -1,12 +1,13 @@
 #coding=utf-8
-if __name__=='__main__':
-    from numpy import *
-    import dbscan
+from numpy import *
 
+import dbscan
+
+if __name__=='__main__':
     print 'step1:load data'
     dataSet = []
     fileIn = open('testSet.txt')
-    for line in fileIn.readlines():
+    for line in fileIn:
         lineArr = line.strip().split('\t')
         dataSet.append([float(lineArr[0]), float(lineArr[1])])
     # dataSet中的每一个元素表示一个点[-2.651229, -3.103198]
